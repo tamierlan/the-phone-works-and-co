@@ -355,8 +355,12 @@ footer .section .footer-wrapper {
 }
 
 footer .section .icon-wrapper {
-  display: flex;
+  /* display: flex;  */
   padding-bottom: 10px;
+}
+footer .section .icon-wrapper a {
+  display: flex;
+  text-decoration: none;
 }
 footer .section img {
   height: 30px;
@@ -482,6 +486,10 @@ button:focus {
   display: grid;
   grid-template-columns: var(--column-4);
 }
+/* .contact-one .google-yelp a {
+  display: flex;
+  text-decoration: none;
+} */
 .google-yelp p {
   color: var(--burgundy);
   text-shadow: 1px 1px var(--orange);
