@@ -71,8 +71,9 @@ const favicon = require('serve-favicon')
 if (process.env.NODE_ENV === 'production') {
 
   server.use(express.static('client/build'));
+  server.use(favicon(__dirname+'/client/build/favicon.ico'))
   server.get('*', (req, res) => {
-    res.sendFile(favicon(path.join(__dirname+'/client/build/index.html'+'favicon.ico'));
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
   });
 }
 
