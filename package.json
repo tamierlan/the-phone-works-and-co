@@ -4,15 +4,15 @@
   "description": "website for the phone-works-and-co",
   "main": "index.js",
   "engines": {
-  "node": "v12.13.0"
-},
-"scripts": {
-  "start": "node server.js",
-  "server": "nodemon server.js",
-  "client": "cd client && npm start",
-  "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\"",
-  "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
-},
+    "node": "v12.13.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
   "author": "tommmy",
   "license": "ISC",
   "dependencies": {
@@ -20,6 +20,7 @@
     "concurrently": "^5.1.0",
     "express": "^4.17.1",
     "nodemailer": "^6.4.5",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "serve-favicon": "^2.5.0"
   }
 }

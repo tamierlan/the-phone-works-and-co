@@ -50,13 +50,39 @@ server.post('/api/form', (req, res) => {
 })
 
 
+
+// if (process.env.NODE_ENV === 'production') {
+//
+//   server.use(express.static('client/build'));
+//   server.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname+'/client/build/index.html'));
+//   });
+// }
+
+
+
+
+
+
+
+
+
+const favicon = require('serve-favicon')
 if (process.env.NODE_ENV === 'production') {
 
   server.use(express.static('client/build'));
   server.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+    res.sendFile(favicon(path.join(__dirname+'/client/build/index.html'+'favicon.ico'));
   });
 }
+
+
+
+
+
+
+
+
 
 
 const PORT = process.env.PORT || 5000
