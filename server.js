@@ -22,14 +22,14 @@ server.post('/api/form', (req, res) => {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'hudojnik.1993@gmail.com',
-        pass: 'tamerlan93'
+        user: 'thephoneworksandco@gmail.com',
+        pass: '133bedford'
       }
     })
 
     let mailOptions = {
       from: req.body.email,
-      to: 'hudojnik.1993@gmail.com',
+      to: 'thephoneworksandco@gmail.com',
       replyTo: req.body.email,
       subject: 'New Message',
       text: req.body.message,
@@ -51,31 +51,28 @@ server.post('/api/form', (req, res) => {
 
 
 
-// if (process.env.NODE_ENV === 'production') {
-//
-//   server.use(express.static('client/build'));
-//   server.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname+'/client/build/index.html'));
-//   });
-// }
 
 
 
 
 
-
-
-
-
-const favicon = require('serve-favicon')
 if (process.env.NODE_ENV === 'production') {
 
   server.use(express.static('client/build'));
-  server.use(favicon(__dirname+'/client/build/favicon.ico'))
   server.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
   });
 }
+
+// const favicon = require('serve-favicon')
+// if (process.env.NODE_ENV === 'production') {
+//
+//   server.use(express.static('client/build'));
+//   server.use(favicon(__dirname+'/client/build/favicon.ico'))
+//   server.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname+'/client/build/index.html'));
+//   });
+// }
 
 
 
