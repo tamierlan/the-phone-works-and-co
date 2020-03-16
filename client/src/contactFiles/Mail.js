@@ -28,6 +28,9 @@ export default function Mail() {
       email,
       message
     })
+    setName('')
+    setEmail('')
+    setMessage('')
   }
 
 
